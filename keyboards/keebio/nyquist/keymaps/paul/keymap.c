@@ -22,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty
  * ,-----------------------------------------------------------------------------------.
- * |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
+ * |  Esc |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  |   \  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
@@ -30,17 +30,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |Shift(|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Shift)|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |Mouse |      | Alt  | GUI  |Lower |Space |Raise | Comp | Left | Down |  Up  |Right |
+ * |Mouse | Comp | Alt  | GUI  |Lower |Space |Raise | Ctrl | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  *
- * For now the compose key is just right alt
+ * Have to figure out how to do the compose key
  */
 [_QWERTY] = LAYOUT( \
-  KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
+  KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS, \
   KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT, \
   KC_LSPO, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, \
-  MOUSE,   XXXXXXX, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  RAISE,   KC_RALT, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
+  MOUSE,   XXXXXXX, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  RAISE,   KC_RCTL, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
 ),
 
 /* Lower
