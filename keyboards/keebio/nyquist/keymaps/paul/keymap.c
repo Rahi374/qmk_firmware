@@ -49,9 +49,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |PrScr | Esc  |   `  | Home | PgUp |      |   [  |   ]  |   -  |   =  | Bksp | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |  F11 |  F12 |   ~  | End  | PgDn |      | Left | Down |  Up  |Right |   '  |   "  |
+ * |      |      |   ~  | End  | PgDn |      | Left | Down |  Up  |Right |   '  |   "  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |  F13 |  F14 |      |      | Menu |      |   {  |   }  |      |      |   |  |      |
+ * |      |      |      |      | Menu |      |   {  |   }  |  F11 |  F12 |   |  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Play | Stop | Next | Prev |      |             | Mute | Vol- | Vol+ | Bri- | Bri+ |
  * `-----------------------------------------------------------------------------------'
@@ -59,8 +59,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = LAYOUT( \
   _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_PAUS, \
   KC_PSCR, KC_ESC,  KC_GRV,  KC_HOME, KC_PGUP, _______, KC_LBRC, KC_RBRC, KC_MINS, KC_EQL,  KC_BSPC, KC_DEL, \
-  KC_F11,  KC_F12,  KC_TILD, KC_END,  KC_PGDN, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT, KC_DQUO, \
-  KC_F13,  KC_F14, _______, _______, KC_APP,  _______, KC_LCBR, KC_RCBR, _______, _______, KC_PIPE, _______, \
+  _______, _______, KC_TILD, KC_END,  KC_PGDN, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT, KC_DQUO, \
+  _______, _______, _______, _______, KC_APP,  _______, KC_LCBR, KC_RCBR, KC_F11,  KC_F12,  KC_PIPE, _______, \
   KC_MPLY, KC_MSTP, KC_MNXT, KC_MPRV, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_BRID, KC_BRIU \
 ),
 
@@ -70,9 +70,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |PrScr | Esc  |   `  | Home | PgUp |      |   [  |   ]  |   -  |   =  | Bksp | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |  F11 |  F12 |   ~  | End  | PgDn |      | Left | Down |  Up  |Right |   '  |   "  |
+ * |      |      |   ~  | End  | PgDn |      | Left | Down |  Up  |Right |   '  |   "  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |  F13 |  F14 |      |      | Menu |      |   {  |   }  |      |      |   |  |      |
+ * |      |      |      |      | Menu |      |   {  |   }  |  F11 |  F12 |   |  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Play | Stop | Next | Prev |      |             | Mute | Vol- | Vol+ | Bri- | Bri+ |
  * `-----------------------------------------------------------------------------------'
@@ -80,8 +80,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE] = LAYOUT( \
   _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_PAUS, \
   KC_PSCR, KC_ESC,  KC_GRV,  KC_HOME, KC_PGUP, _______, KC_LBRC, KC_RBRC, KC_MINS, KC_EQL,  KC_BSPC, KC_DEL, \
-  KC_F11,  KC_F12,  KC_TILD, KC_END,  KC_PGDN, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT, KC_DQUO, \
-  KC_F13,  KC_F14, _______, _______,  KC_APP,  _______, KC_LCBR, KC_RCBR, _______, _______, KC_PIPE, _______, \
+  _______, _______, KC_TILD, KC_END,  KC_PGDN, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT, KC_DQUO, \
+  _______, _______, _______, _______, KC_APP,  _______, KC_LCBR, KC_RCBR, KC_F11,  KC_F12,  KC_PIPE, _______, \
   KC_MPLY, KC_MSTP, KC_MNXT, KC_MPRV, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_BRID, KC_BRIU \
 ),
 
