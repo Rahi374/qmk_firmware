@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |Shift(|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Shift)|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |Mouse |AltGr | Alt  | GUI  |Lower |Space |SpRais| Ctrl | Left | Down |  Up  |Right |
+ * |Mouse |AltGr | Alt  | GUI  |Lower |Space |Raise |SpCtrl| Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  *
  * Have to figure out how to do the compose key
@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS, \
   KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT, \
   KC_LSPO, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, \
-  MOUSE,   KC_ALGR, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  LT(RAISE, KC_SPC),   KC_RCTL, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
+  MOUSE,   KC_ALGR, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  RAISE,   RCTL_T(KC_SPC), KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
 ),
 
 /* Dvorak
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  KC_SLSH, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_BSLS, \
   KC_LCTL, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_ENT, \
   KC_LSPO, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_RSPC , \
-  MOUSE,   KC_ALGR, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  RAISE,   KC_RCTL, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
+  MOUSE,   KC_ALGR, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  RAISE,   RCTL_T(KC_SPC), KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
 ),
 
 /* Lower
@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE] = LAYOUT( \
   _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_PAUS, \
   KC_PSCR, KC_ESC,  KC_GRV,  C(S(KC_PGUP)), C(KC_PGUP), KC_F11, KC_LBRC, KC_RBRC, KC_MINS, KC_EQL,  KC_BSPC, KC_DEL, \
-  _______, _______, KC_TILD, C(S(KC_PGUP)), C(KC_PGDN), KC_F11, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT, KC_DQUO, \
+  _______, _______, KC_TILD, C(S(KC_PGUP)), C(KC_PGDN), KC_F12, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT, KC_DQUO, \
   _______, _______, _______, _______, KC_APP,  _______, KC_LCBR, KC_RCBR, KC_UNDS, KC_PLUS, KC_PIPE, _______, \
   KC_MPLY, KC_MSTP, KC_MNXT, KC_MPRV, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_BRID, KC_BRIU \
 ),
