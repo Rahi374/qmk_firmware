@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |      |      |   ~  | End  | PgDn |  F12 | Left | Down |  Up  |Right |   '  |   "  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |      | Menu |      |   {  |   }  |   _  |   +  |   |  |      |
+ * |      |      |      |   `  | Menu |      |   {  |   }  |   _  |   +  |   |  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Play | Stop | Next | Prev |      |             | Mute | Vol- | Vol+ | Bri- | Bri+ |
  * `-----------------------------------------------------------------------------------'
@@ -85,8 +85,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_PAUS, \
   KC_PSCR, KC_ESC,  KC_GRV,  KC_HOME, KC_PGUP, KC_F11,  KC_LBRC, KC_RBRC, KC_MINS, KC_EQL,  KC_BSPC, KC_DEL, \
   _______, _______, KC_TILD, KC_END,  KC_PGDN, KC_F12,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT, KC_DQUO, \
-  _______, _______, _______, _______, KC_APP,  _______, KC_LCBR, KC_RCBR, KC_UNDS, KC_PLUS, KC_PIPE, _______, \
-  KC_MPLY, KC_MSTP, KC_MNXT, KC_MPRV, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_BRID, KC_BRIU \
+  _______, _______, _______, KC_GRV,  KC_APP,  _______, KC_LCBR, KC_RCBR, KC_UNDS, KC_PLUS, KC_PIPE, _______, \
+  KC_MPLY, KC_MSTP, KC_MPRV, KC_MNXT, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_BRID, KC_BRIU \
 ),
 
 /* Raise
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |      |      |CSPgDn|SPgDn |CPgDn |  F12 | Left | Down |  Up  |Right |   '  |   "  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |      | Menu |      |   {  |   }  |   _  |   +  |   |  |      |
+ * |      |      |      |   `  | Menu |      |   {  |   }  |   _  |   +  |   |  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Play | Stop | Next | Prev |      |             | Mute | Vol- | Vol+ | Bri- | Bri+ |
  * `-----------------------------------------------------------------------------------'
@@ -106,8 +106,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_PAUS, \
   KC_PSCR, KC_ESC,  C(S(KC_PGUP)), S(KC_PGUP), C(KC_PGUP), KC_F11, KC_LBRC, KC_RBRC, KC_MINS, KC_EQL,  KC_BSPC, KC_DEL, \
   _______, _______, C(S(KC_PGDN)), S(KC_PGDN), C(KC_PGDN), KC_F12, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT, KC_DQUO, \
-  _______, _______, _______, _______, KC_APP,  _______, KC_LCBR, KC_RCBR, KC_UNDS, KC_PLUS, KC_PIPE, _______, \
-  KC_MPLY, KC_MSTP, KC_MNXT, KC_MPRV, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_BRID, KC_BRIU \
+  _______, _______, _______, KC_GRV,  KC_APP,  _______, KC_LCBR, KC_RCBR, KC_UNDS, KC_PLUS, KC_PIPE, _______, \
+  KC_MPLY, KC_MSTP, KC_MPRV, KC_MNXT, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_BRID, KC_BRIU \
 ),
 
 /* Mouse
