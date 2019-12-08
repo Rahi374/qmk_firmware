@@ -25,13 +25,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 #define EE_HANDS
 
-// #undef RGBLED_NUM
+#undef RGBLED_NUM
 #define RGBLIGHT_ANIMATIONS
 // #define RGBLIGHT_MODE_STATIC_LIGHT
-// #define RGBLED_NUM 12
-#define RGBLIGHT_HUE_STEP 270
+#define RGBLED_NUM 24
+#define RGBLIGHT_HUE_STEP 255
 #define RGBLIGHT_SAT_STEP 66
 #define RGBLIGHT_VAL_STEP 61
+#define RGBLIGHT_LIMIT_VAL 255
 
 #define MOUSEKEY_DELAY             300
 #define MOUSEKEY_INTERVAL          50
