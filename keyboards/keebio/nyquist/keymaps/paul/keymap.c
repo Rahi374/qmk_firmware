@@ -163,7 +163,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |  Del |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |Qwerty|      |Dvorak|      |      |
+ * |      |      |      |      |      |      |  RGB |Qwerty|      |Dvorak|      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |Gaming|      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -173,7 +173,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] =  LAYOUT( \
   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL, \
-  _______, _______, _______, _______, _______, _______, _______, QWERTY,  _______, DVORAK,  _______, _______, \
+  _______, _______, _______, _______, _______, _______, RGB_TOG, QWERTY,  _______, DVORAK,  _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, GAMING,  _______, _______, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
   )
@@ -183,6 +183,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 void persistent_default_layer_set(uint16_t default_layer) {
   eeconfig_update_default_layer(default_layer);
   default_layer_set(default_layer);
+  rgblight_setrgb_range(0x69, 0x35, 0x9c, 0, 100);
+  rgblight_set();
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
