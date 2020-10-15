@@ -9,15 +9,17 @@ extern keymap_config_t keymap_config;
 #define _QWERTY 0
 #define _DVORAK 1
 #define _GAMING 2
-#define _LOWER 3
-#define _RAISE 4
-#define _MOUSE 5
+#define _FFXIV 3
+#define _LOWER 4
+#define _RAISE 5
+#define _MOUSE 6
 #define _ADJUST 16
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
   DVORAK,
   GAMING,
+  FFXIV,
   LOWER,
   RAISE,
   MOUSE,
@@ -93,6 +95,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   MOUSE,   KC_ALGR, KC_LALT, KC_LGUI, KC_SPC,  LOWER,   RAISE,   RCTL_T(KC_SPC), KC_SLSH, KC_LEFT, KC_DOWN, KC_RGHT \
 ),
 
+/* FFXIV
+ * ,-----------------------------------------------------------------------------------.
+ * |  Esc |  F1  |  F2  |  F3  |  F4  |  F5  |   6  |   7  |   8  |   9  |   0  | Bksp |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  |   \  |
+ * |------+------+------+------+------+-------------+------+------+------+------+------|
+ * | Ctrl |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |Enter |
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * |Shift(|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |  /   |Shift)|
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Alt  | CAS  |  CA  |  AS  |  CS  |Space |Lower |Raise | Left | Down |  Up  |Right |
+ * `-----------------------------------------------------------------------------------'
+ */
+[_FFXIV] = LAYOUT( \
+  KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
+  KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS, \
+  KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT, \
+  KC_LSPO, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, \
+  KC_LALT, C(S(KC_LALT)), C(KC_LALT), S(KC_LALT), C(KC_LSHIFT), KC_SPC,  LOWER,   RAISE,   KC_LEFT, KC_DOWN, KC_UP, KC_RGHT \
+),
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
@@ -165,7 +187,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |      |      |      |      |      |      |  RGB |Qwerty|      |Dvorak|      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |Gaming|      |      |      |      |
+ * |      |      |      |      |      |      |      |Gaming|FFXIV |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
@@ -174,7 +196,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12, \
   _______, _______, _______, _______, _______, _______, RGB_VAI, _______, _______, _______, _______, KC_DEL, \
   _______, _______, _______, _______, _______, _______, RGB_TOG, QWERTY,  _______, DVORAK,  _______, _______, \
-  _______, _______, _______, _______, _______, _______, _______, GAMING,  _______, _______, _______, _______, \
+  _______, _______, _______, _______, _______, _______, _______, GAMING,  FFXIV,   _______, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
   )
 
@@ -203,6 +225,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case GAMING:
       if (record->event.pressed)
         persistent_default_layer_set(1UL<<_GAMING);
+        return false;
+	break;
+    case FFXIV:
+      if (record->event.pressed)
+        persistent_default_layer_set(1UL<<_FFXIV);
         return false;
 	break;
     case LOWER:
